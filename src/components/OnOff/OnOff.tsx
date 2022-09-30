@@ -1,27 +1,47 @@
-import React from "react";
+import React, {useId, useState} from "react";
 import s from './OnOff.module.css'
 
 export type OnOffPropsType = {
-    status: boolean;
+    // on?: boolean;
 }
 
-const OnOff = (props: OnOffPropsType) => {
-    if (props.status) {
-    return (
-        <div className={s.container}>
-            <div className={s.greenBox}><p>On</p></div>
-            <div className={s.box}><p>Off</p></div>
-            <div className={s.greenCircle}></div>
-        </div>
-    )} else {
-        return (
-            <div className={s.container}>
-                <div className={s.box}><p>On</p></div>
-                <div className={s.redBox}><p>Off</p></div>
-                <div className={s.redCircle}></div>
-            </div>
-        )
-    }
-};
+export const OnOff = (props: OnOffPropsType) => {
+    console.log('OnOff rendering')
+    const [on, setOn] = useState(false)
 
-export default OnOff;
+    const onStyle = {
+        width: '30px',
+        height: '20px',
+        border: '1px solid black',
+        display: 'inline-block',
+        padding: '2px',
+        backgroundColor: on ? 'green' : 'white'
+    }
+    const offStyle = {
+        width: '30px',
+        height: '20px',
+        border: '1px solid black',
+        display: 'inline-block',
+        marginLeft: '5px',
+        padding: '2px',
+        backgroundColor: on ? 'white' : 'red'
+    }
+    const indicatorStyle = {
+        width: '10px',
+        height: '10px',
+        borderRadius: '5px',
+        border: '1px solid black',
+        display: 'inline-block',
+        marginLeft: '5px',
+        backgroundColor: on ? 'green' : 'red',
+    }
+
+
+    return (
+        <div>
+            <div style={onStyle} onClick={() => {setOn(true)}}>On</div>
+            <div style={offStyle} onClick={() => {setOn(false)}}>Off</div>
+            <div style={indicatorStyle}></div>
+        </div>
+    )
+};
