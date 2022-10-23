@@ -1,0 +1,62 @@
+.container {
+    position: relative;
+}
+
+.window {
+    width: 130px;
+    height: 45px;
+    border: 1px solid deepskyblue;
+    text-align: center;
+    position: relative;
+    margin-top: 60px;
+}
+
+.titleText {
+    position: relative;
+    top: 10px;
+    color: blue;
+    font-weight: bold;
+}
+
+.window::after {
+    content: '';
+    border: 6px solid transparent;
+    border-top: 6px solid deepskyblue;
+    position: absolute;
+    top: 20px;
+    right: 3px;
+}
+
+.smallText {
+    font-size: 10px;
+    font-weight: 500;
+    font-style: italic;
+    color: deepskyblue;
+    position: absolute;
+    left: 8px;
+    top: -9px;
+    background-color: white;
+}
+.largeText {
+    font-size: 25px;
+    font-weight: 500;
+    font-style: italic;
+    color: deepskyblue;
+    position: relative;
+    top: 2px;
+}
+
+.list {
+    width: 130px;
+    border: 1px solid black;
+    text-align: center;
+    position: absolute;
+    top: -2px;
+    background-color: white;
+}
+
+.listText {
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+}
