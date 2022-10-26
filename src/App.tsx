@@ -21,8 +21,8 @@ function App() {
 
     }
 
-    const onChangeSelectHandler = (title: string) => {
-        setValue(title)
+    const onChangeSelectHandler = (value: string) => {
+        setValue(value)
     }
 
     return (
@@ -49,10 +49,10 @@ function App() {
             <Select
                 value={value}
                 items={[
-                    {title: "Dimych", value: 1},
-                    {title: "Alex", value: 2},
-                    {title: "Valera", value: 3},
-                    {title: "Viktor", value: 4}
+                    {title: "Dimych", value: '1'},
+                    {title: "Alex", value: '2'},
+                    {title: "Valera", value: '3'},
+                    {title: "Viktor", value: '4'}
             ]}
                 onChange={onChangeSelectHandler}/>
         </div>
