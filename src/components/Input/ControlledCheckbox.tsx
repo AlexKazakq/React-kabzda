@@ -1,7 +1,7 @@
 import React, {ChangeEvent, useState} from "react";
 
 
-export const ControledCheckbox = () => {
+export const ControlledCheckboxSecret = () => {
     const [parentValue, setParentValue] = useState(true)
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => { setParentValue(e.currentTarget.checked)}
@@ -11,3 +11,4 @@ export const ControledCheckbox = () => {
     );
 };
 
+export const ControlledCheckbox = React.memo(ControlledCheckboxSecret)

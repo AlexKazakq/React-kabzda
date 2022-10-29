@@ -1,12 +1,11 @@
-import React, {useId, useState} from "react";
-import s from './OnOff.module.css'
+import React, {useState} from "react";
 
 
 type UncontrolledOnOfType = {
     onChange: (on: boolean) => void
 }
 
-export const UncontrolOnOff = (props: UncontrolledOnOfType) => {
+export const UncontrolOnOffSecret = (props: UncontrolledOnOfType) => {
     console.log('UncontrolOnOff rendering')
     const [on, setOn] = useState(false)
 
@@ -60,3 +59,5 @@ export const UncontrolOnOff = (props: UncontrolledOnOfType) => {
         </div>
     )
 };
+
+export const UncontrolOnOff = React.memo(UncontrolOnOffSecret)

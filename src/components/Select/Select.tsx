@@ -12,7 +12,7 @@ type SelectPropsType = {
     onChange: (value: any) => void
 }
 
-export const Select = (props: SelectPropsType) => {
+export const SelectSecret = (props: SelectPropsType) => {
 
     const [visible, setVisible] = useState(false)
     const [hoveredElementValue, setHoveredElementValue] = useState(props.value)
@@ -75,3 +75,5 @@ export const Select = (props: SelectPropsType) => {
         </div>
     )
 }
+
+export const Select = React.memo(SelectSecret)

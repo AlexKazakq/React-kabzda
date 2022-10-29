@@ -1,12 +1,12 @@
-import React, {useId, useState} from "react";
-import s from './OnOff.module.css'
+import React from "react";
+
 
 export type OnOffPropsType = {
     on: boolean;
     setOn: (on: boolean) => void
 }
 
-export const OnOff = (props: OnOffPropsType) => {
+export const OnOffSecret = (props: OnOffPropsType) => {
     console.log('OnOff rendering')
 
     const onStyle = {
@@ -45,3 +45,6 @@ export const OnOff = (props: OnOffPropsType) => {
         </div>
     )
 };
+
+
+export const OnOff = React.memo(OnOffSecret)

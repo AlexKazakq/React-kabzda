@@ -2,7 +2,7 @@ import React, {ChangeEvent, useRef, useState} from "react";
 import {Simulate} from "react-dom/test-utils";
 import input = Simulate.input;
 
-export const UncontrolledInput = () => {
+export const UncontrolledInputSecret = () => {
 
     const [value, setValue] = useState('')
     const inputRef = useRef<HTMLInputElement>(null)
@@ -26,3 +26,5 @@ export const UncontrolledInput = () => {
         </>
     );
 };
+
+export const UncontrolledInput = React.memo(UncontrolledInputSecret)

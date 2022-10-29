@@ -4,6 +4,9 @@ import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {UncontrolOnOff} from "./components/OnOff/UncontrolOnOff";
 import {Accordion} from "./components/Accordion/Accordion";
 import {Select} from "./components/Select/Select";
+import {UncontrolledAccordion} from "./components/Accordion/UncontrolledAccordion";
+import {ReactMemo} from "./components/ReactMemo/ReactMemo";
+import {OnOff} from "./components/OnOff/OnOff";
 
 
 // function declaration
@@ -17,9 +20,9 @@ function App() {
     const [on, setOn] = useState<boolean>(false)
     const [value, setValue] = useState('')
 
-    const onClickItemHandler = () => {
-
-    }
+    // const onClickItemHandler = () => {
+    //
+    // }
 
     const onChangeSelectHandler = (value: string) => {
         setValue(value)
@@ -27,25 +30,25 @@ function App() {
 
     return (
         <div className={"App"}>
-            {/*<Accordion titleValue={"--Users--"}*/}
-            {/*           collapsed={accordionCollapsed}*/}
-            {/*           setAccordion={() => setAccordionCollapsed(!accordionCollapsed)}*/}
-            {/*           items={[*/}
-            {/*               {title: "Dimych", value: 1},*/}
-            {/*               {title: "Alex", value: 2},*/}
-            {/*               {title: "Valera", value: 3},*/}
-            {/*               {title: "Viktor", value: 4}*/}
-            {/*           ]}*/}
-            {/*           onClick={(value) => {*/}
+            <Accordion titleValue={"--Users--"}
+                       collapsed={accordionCollapsed}
+                       setAccordion={() => setAccordionCollapsed(!accordionCollapsed)}
+                       items={[
+                           {title: "Dimych", value: 1},
+                           {title: "Alex", value: 2},
+                           {title: "Valera", value: 3},
+                           {title: "Viktor", value: 4}
+                       ]}
+                       onClick={(value) => {
 
-            {/*           }}*/}
-            {/*/>*/}
+                       }}
+            />
 
-            {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
+            <Rating value={ratingValue} onClick={setRatingValue}/>
 
-            {/*<UncontrolOnOff onChange={setOn}/> {on.toString()}*/}
-            {/*<OnOff on={on} setOn={setOn}/>*/}
-
+            <UncontrolOnOff onChange={setOn}/> {on.toString()}
+            <OnOff on={on} setOn={setOn}/>
+            <UncontrolledAccordion titleValue={'Menu'}/>
             <Select
                 value={value}
                 items={[
@@ -55,6 +58,7 @@ function App() {
                     {title: "Viktor", value: '4'}
             ]}
                 onChange={onChangeSelectHandler}/>
+            <ReactMemo/>
         </div>
 )
 

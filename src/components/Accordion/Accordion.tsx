@@ -13,13 +13,13 @@ type AccordionPropsType = {
     onClick: (value: any) => void
 }
 
-export function Accordion(props: AccordionPropsType) {
+export function AccordionSecret(props: AccordionPropsType) {
     console.log('Accordion rendering')
 
 
     return (
         <div>
-            <AccordionTittle title={props.titleValue} onClick={props.setAccordion}/>
+            <AccordionTitle title={props.titleValue} onClick={props.setAccordion}/>
             {!props.collapsed && <AccordionBody items={props.items} onClick={props.onClick}/>}
         </div>
     );
@@ -30,7 +30,7 @@ type AccordionTittlePropsType = {
     onClick: () => void
 }
 
-function AccordionTittle(props: AccordionTittlePropsType) {
+function AccordionTittleSecret(props: AccordionTittlePropsType) {
     console.log('AccordionTittle rendering')
     return <h3 onClick={() => {props.onClick()}}>{props.title}</h3>
 }
@@ -40,7 +40,7 @@ type AccordionBodyPropsType = {
     onClick: (value: any) => void
 }
 
-function AccordionBody(props: AccordionBodyPropsType) {
+function AccordionBodySecret(props: AccordionBodyPropsType) {
     console.log('AccordionBody rendering')
     return (
         <ul>
@@ -49,3 +49,6 @@ function AccordionBody(props: AccordionBodyPropsType) {
     );
 }
 
+const AccordionTitle = React.memo(AccordionTittleSecret)
+const AccordionBody = React.memo(AccordionBodySecret)
+export const Accordion = React.memo(AccordionSecret)
