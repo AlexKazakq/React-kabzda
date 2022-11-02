@@ -7,6 +7,8 @@ import {Select} from "./components/Select/Select";
 import {UncontrolledAccordion} from "./components/Accordion/UncontrolledAccordion";
 import {ReactMemo} from "./components/ReactMemo/ReactMemo";
 import {OnOff} from "./components/OnOff/OnOff";
+import {DifficultCounting} from "./components/UseMemo/DifficultCounting";
+import {HelpsForReactMemo} from "./components/UseMemo/HelpsForReactMemo";
 
 
 // function declaration
@@ -59,6 +61,8 @@ function App() {
             ]}
                 onChange={onChangeSelectHandler}/>
             <ReactMemo/>
+            <DifficultCounting/>
+            <HelpsForReactMemo/>
         </div>
 )
 

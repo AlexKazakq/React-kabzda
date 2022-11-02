@@ -58,9 +58,9 @@ export const SelectSecret = (props: SelectPropsType) => {
 
     return (
         <div className={s.container} onKeyUp={onKeyUp} tabIndex={0}>
-            <div className={!visible ? s.window : s.openWindow} onClick={onClickHandler}><span
-                className={props.value ? s.smallText : s.largeText}>name</span><span
-                className={s.titleText}>{selectItem && selectItem.title}</span></div>
+            <div className={!visible ? s.window : s.openWindow} onClick={onClickHandler}>
+                <span className={props.value ? s.smallText : s.largeText}>name</span>
+                <span className={s.titleText}>{selectItem && selectItem.title}</span></div>
             {visible &&
                 <div className={s.list}>
                     {props.items.map(i => <div key={i.value}
