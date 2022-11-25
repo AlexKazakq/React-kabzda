@@ -9,6 +9,7 @@ import {ReactMemo} from "./components/ReactMemo/ReactMemo";
 import {OnOff} from "./components/OnOff/OnOff";
 import {DifficultCounting} from "./components/UseMemoUseCallback/DifficultCounting";
 import {HelpsForReactMemo} from "./components/UseMemoUseCallback/HelpsForReactMemo";
+import {SetTimeoutExample} from "./components/UseEffect/SetTimeoutExample";
 
 
 // function declaration
@@ -32,37 +33,38 @@ function App() {
 
     return (
         <div className={"App"}>
-            <Accordion titleValue={"--Users--"}
-                       collapsed={accordionCollapsed}
-                       setAccordion={() => setAccordionCollapsed(!accordionCollapsed)}
-                       items={[
-                           {title: "Dimych", value: 1},
-                           {title: "Alex", value: 2},
-                           {title: "Valera", value: 3},
-                           {title: "Viktor", value: 4}
-                       ]}
-                       onClick={(value) => {
+            {/*<Accordion titleValue={"--Users--"}*/}
+            {/*           collapsed={accordionCollapsed}*/}
+            {/*           setAccordion={() => setAccordionCollapsed(!accordionCollapsed)}*/}
+            {/*           items={[*/}
+            {/*               {title: "Dimych", value: 1},*/}
+            {/*               {title: "Alex", value: 2},*/}
+            {/*               {title: "Valera", value: 3},*/}
+            {/*               {title: "Viktor", value: 4}*/}
+            {/*           ]}*/}
+            {/*           onClick={(value) => {*/}
 
-                       }}
-            />
+            {/*           }}*/}
+            {/*/>*/}
 
-            <Rating value={ratingValue} onClick={setRatingValue}/>
+            {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
 
-            <UncontrolOnOff onChange={setOn}/> {on.toString()}
-            <OnOff on={on} setOn={setOn}/>
-            <UncontrolledAccordion titleValue={'Menu'}/>
-            <Select
-                value={value}
-                items={[
-                    {title: "Dimych", value: '1'},
-                    {title: "Alex", value: '2'},
-                    {title: "Valera", value: '3'},
-                    {title: "Viktor", value: '4'}
-            ]}
-                onChange={onChangeSelectHandler}/>
-            <ReactMemo/>
-            <DifficultCounting/>
-            <HelpsForReactMemo/>
+            {/*<UncontrolOnOff onChange={setOn}/> {on.toString()}*/}
+            {/*<OnOff on={on} setOn={setOn}/>*/}
+            {/*<UncontrolledAccordion titleValue={'Menu'}/>*/}
+            {/*<Select*/}
+            {/*    value={value}*/}
+            {/*    items={[*/}
+            {/*        {title: "Dimych", value: '1'},*/}
+            {/*        {title: "Alex", value: '2'},*/}
+            {/*        {title: "Valera", value: '3'},*/}
+            {/*        {title: "Viktor", value: '4'}*/}
+            {/*]}*/}
+            {/*    onChange={onChangeSelectHandler}/>*/}
+            {/*<ReactMemo/>*/}
+            {/*<DifficultCounting/>*/}
+            {/*<HelpsForReactMemo/>*/}
+            <SetTimeoutExample/>
         </div>
 )
 
