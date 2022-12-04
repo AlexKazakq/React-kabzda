@@ -9,7 +9,11 @@ import {ReactMemo} from "./components/ReactMemo/ReactMemo";
 import {OnOff} from "./components/OnOff/OnOff";
 import {DifficultCounting} from "./components/UseMemoUseCallback/DifficultCounting";
 import {HelpsForReactMemo} from "./components/UseMemoUseCallback/HelpsForReactMemo";
-import {SetTimeoutExample} from "./components/UseEffect/SetTimeoutExample";
+import {Clock} from "./components/UseEffect/Clock";
+import {BaseAnalogExample} from "./components/UseEffect/BaseAnalogExample";
+import {BaseDigitalExample} from "./components/UseEffect/BaseDigitalExample";
+import {ResetEffect} from "./components/UseEffect/ResetEffect";
+import {KeysTracker} from "./components/UseEffect/KeysTracker";
 
 
 // function declaration
@@ -64,7 +68,11 @@ function App() {
             {/*<ReactMemo/>*/}
             {/*<DifficultCounting/>*/}
             {/*<HelpsForReactMemo/>*/}
-            <SetTimeoutExample/>
+            {/*<Clock/>*/}
+            {/*<BaseAnalogExample/>*/}
+            {/*<BaseDigitalExample/>*/}
+            {/*<ResetEffect/>*/}
+            <KeysTracker/>
         </div>
 )
 
